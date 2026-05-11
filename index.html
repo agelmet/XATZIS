@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- SEO: Meta Title & Description -->
     <title>Ψυχοθεραπευτής Παγκράτι Αθήνα | Ψυχοθεραπεία – Χατζής Κωνσταντίνος</title>
     <meta name="description" content="Ψυχοθεραπεία στο Παγκράτι Αθήνας για άγχος, κρίσεις πανικού και κατάθλιψη. Συνεδρίες δια ζώσης και online.">
     
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -19,11 +22,11 @@
                 extend: {
                     colors: {
                         pastel: {
-                            petrol: '#3A6B7E',    /* Primary CTA & Accents */
-                            petrolLight: '#EBF2F4', /* Soft Background 1 */
-                            sand: '#F7F5F0',      /* Soft Background 2 */
-                            textDark: '#1E293B',  /* Primary Text */
-                            textMuted: '#475569'  /* Secondary Text */
+                            petrol: '#3A6B7E',    
+                            petrolLight: '#EBF2F4', 
+                            sand: '#F7F5F0',      
+                            textDark: '#1E293B',  
+                            textMuted: '#475569'  
                         }
                     },
                     fontFamily: {
@@ -52,12 +55,9 @@
         .delay-100 { transition-delay: 100ms; }
         .delay-200 { transition-delay: 200ms; }
 
+        /* Modified Nav for permanent visibility */
         .nav-scrolled {
-            background-color: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(8px);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            padding-top: 1rem;
-            padding-bottom: 1rem;
         }
 
         #lightbox {
@@ -73,41 +73,52 @@
 </head>
 <body class="font-body antialiased overflow-x-hidden">
 
-    <nav class="fixed w-full z-50 transition-all duration-300 py-6" id="navbar">
+    <!-- Header / Navigation -->
+    <!-- Added fixed white/frosted background for permanent visibility -->
+    <nav class="fixed w-full z-50 transition-all duration-300 py-5 bg-white/95 backdrop-blur-md border-b border-gray-100" id="navbar">
         <div class="max-w-[90rem] mx-auto px-6 lg:px-12 flex justify-between items-center">
             
+            <!-- Branding: Single lines, strictly preventing wrap -->
             <a href="#" class="flex flex-col" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
                 <span class="text-pastel-textDark font-sans font-bold text-lg md:text-xl tracking-wider whitespace-nowrap">ΚΩΝΣΤΑΝΤΙΝΟΣ ΧΑΤΖΗΣ MSc</span>
                 <span class="text-pastel-petrol font-sans text-xs md:text-sm tracking-wide whitespace-nowrap">Ψυχαναλυτική Ψυχοθεραπεία</span>
             </a>
             
+            <!-- Desktop Links & Socials -->
             <div class="hidden lg:flex items-center space-x-8">
-                <div class="flex space-x-6 mr-6 border-r border-gray-200 pr-8">
+                <!-- Removed right borders and restrictive margins to fix cutoff text -->
+                <div class="flex space-x-6 lg:space-x-8 items-center">
                     <a href="#" class="text-sm font-sans font-medium text-pastel-textDark hover:text-pastel-petrol transition-colors">ΑΡΧΙΚΗ</a>
                     <a href="#bio" class="text-sm font-sans font-medium text-pastel-textDark hover:text-pastel-petrol transition-colors">Ο ΨΥΧΟΘΕΡΑΠΕΥΤΗΣ</a>
                     <a href="#approach" class="text-sm font-sans font-medium text-pastel-textDark hover:text-pastel-petrol transition-colors">ΠΡΟΣΕΓΓΙΣΗ</a>
                     <a href="#services" class="text-sm font-sans font-medium text-pastel-textDark hover:text-pastel-petrol transition-colors">ΥΠΗΡΕΣΙΕΣ</a>
                     <a href="#contact" class="text-sm font-sans font-medium text-pastel-textDark hover:text-pastel-petrol transition-colors">ΕΠΙΚΟΙΝΩΝΙΑ</a>
-                </div>
-                
-                <div class="flex items-center space-x-4">
-                    <a href="https://www.instagram.com/aytognwsia_psychotherapy/" target="_blank" rel="noopener" class="text-pastel-textMuted hover:text-pastel-petrol transition-colors">
-                        <i data-lucide="instagram" class="w-5 h-5"></i>
-                    </a>
-                    <a href="https://www.facebook.com/Konstantinos.Chatzis.Psy" target="_blank" rel="noopener" class="text-pastel-textMuted hover:text-pastel-petrol transition-colors">
-                        <i data-lucide="facebook" class="w-5 h-5"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@KChatzis_Psychotherapist" target="_blank" rel="noopener" class="text-pastel-textMuted hover:text-pastel-petrol transition-colors">
-                        <i data-lucide="youtube" class="w-5 h-5"></i>
-                    </a>
+                    
+                    <!-- Vertical Divider -->
+                    <span class="w-px h-5 bg-gray-200 block"></span>
+
+                    <!-- Top Right Socials -->
+                    <div class="flex items-center space-x-4">
+                        <a href="https://www.instagram.com/aytognwsia_psychotherapy/" target="_blank" rel="noopener" class="text-pastel-textMuted hover:text-pastel-petrol transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.facebook.com/Konstantinos.Chatzis.Psy" target="_blank" rel="noopener" class="text-pastel-textMuted hover:text-pastel-petrol transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@KChatzis_Psychotherapist" target="_blank" rel="noopener" class="text-pastel-textMuted hover:text-pastel-petrol transition-colors">
+                            <i data-lucide="youtube" class="w-5 h-5"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
+            <!-- Mobile Menu Button -->
             <button class="lg:hidden text-pastel-textDark focus:outline-none" id="mobile-menu-btn">
                 <i data-lucide="menu" class="w-7 h-7"></i>
             </button>
         </div>
         
+        <!-- Mobile Dropdown -->
         <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white hidden flex-col items-center py-8 space-y-6 border-b border-gray-100 shadow-lg">
             <a href="#" class="text-sm font-sans font-medium text-pastel-textDark mobile-link">ΑΡΧΙΚΗ</a>
             <a href="#bio" class="text-sm font-sans font-medium text-pastel-textDark mobile-link">Ο ΨΥΧΟΘΕΡΑΠΕΥΤΗΣ</a>
@@ -123,42 +134,44 @@
         </div>
     </nav>
 
-    <section class="relative min-h-screen flex flex-col lg:flex-row bg-white pt-24 lg:pt-0">
+    <!-- Hero Section (Split Layout) -->
+    <section class="relative min-h-screen flex flex-col lg:flex-row bg-white pt-20 lg:pt-0">
+        <!-- Left Side -->
         <div class="w-full lg:w-1/2 flex items-center justify-center px-6 lg:px-16 py-16 lg:py-0 z-10 bg-pastel-sand/50">
             <div class="max-w-xl reveal">
                 
-                <h1 class="font-sans text-pastel-textDark tracking-tight mb-6">
-                    <span class="block text-sm font-medium text-pastel-textMuted uppercase tracking-widest mb-4">Ψυχοθεραπεία στο Παγκράτι – Ψυχοθεραπεία Αθήνα</span>
-                    
-                    <span class="block text-4xl md:text-5xl lg:text-[3.25rem] font-semibold leading-[1.15]">Ψυχαναλυτική Ψυχοθεραπεία</span>
-                    <span class="block text-4xl md:text-5xl lg:text-[3.25rem] font-normal italic text-pastel-petrol whitespace-nowrap mt-1">Αθήνα, Παγκράτι</span>
+                <!-- Main Title: 3 Lines Format -->
+                <h1 class="font-sans text-pastel-textDark font-semibold text-4xl md:text-5xl lg:text-6xl leading-[1.15] tracking-tight mb-6">
+                    Αναζητήστε την<br>
+                    αλήθεια πίσω από<br>
+                    τα συμπτώματα
                 </h1>
                 
+                <!-- Maintained Subtitle Description -->
                 <p class="text-lg text-pastel-textMuted mb-8 leading-reading font-light">
                     Εστίαση σε άγχος, κατάθλιψη, κρίσεις πανικού, πένθος, θέματα ταυτότητας και φύλου, διατροφικές διαταραχές, με έμφαση στη σχέση θεραπευτή-θεραπευόμενου.
                 </p>
                 
+                <!-- CTA: Click to Call Priority -->
                 <div class="flex flex-col items-start gap-2">
-                    <a href="tel:+306951955938" class="inline-flex items-center gap-3 px-10 py-4 bg-pastel-petrol text-white rounded-md font-sans font-medium text-base tracking-wide hover:bg-opacity-90 transition-all duration-300 shadow-md transform hover:-translate-y-0.5">
+                    <a href="tel:6951955938" class="inline-flex items-center gap-3 px-10 py-4 bg-pastel-petrol text-white rounded-md font-sans font-medium text-base tracking-wide hover:bg-opacity-90 transition-all duration-300 shadow-md transform hover:-translate-y-0.5">
                         <i data-lucide="phone" class="w-5 h-5"></i>
-                        695 195 5938
+                        Κλείστε ραντεβού
                     </a>
-                    <span class="text-sm font-medium text-pastel-textMuted ml-1 flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                        Κλήση τώρα (Κλείστε ραντεβού)
-                    </span>
                 </div>
 
             </div>
         </div>
 
+        <!-- Right Side: Image -->
         <div class="w-full lg:w-1/2 h-[50vh] lg:h-screen relative">
             <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/eacab278bc78a63c2ac250f9561f7e1d78c016d9/xatzis-konstantinos_02.jpg" 
-                 alt="Χώρος Ψυχοθεραπείας Παγκράτι" 
+                 alt="Χώρος Ψυχοθεραπείας" 
                  class="absolute inset-0 w-full h-full object-cover object-top lg:object-center">
         </div>
     </section>
 
+    <!-- Bio Section -->
     <section id="bio" class="py-24 lg:py-32 px-6 lg:px-12 bg-white">
         <div class="max-w-[85rem] mx-auto grid lg:grid-cols-12 gap-16 items-center">
             
@@ -171,6 +184,7 @@
             </div>
 
             <div class="lg:col-span-7 reveal delay-100">
+                <!-- H2 for SEO -->
                 <h2 class="text-xl md:text-2xl font-sans font-medium text-pastel-petrol mb-3 tracking-tight">
                     Ψυχαναλυτική Ψυχοθεραπεία Ενηλίκων & Εφήβων
                 </h2>
@@ -193,6 +207,7 @@
         </div>
     </section>
 
+    <!-- Approach Section -->
     <section id="approach" class="py-24 lg:py-32 px-6 lg:px-12 bg-pastel-petrolLight/50">
         <div class="max-w-[85rem] mx-auto">
             <div class="mb-16 reveal">
@@ -201,6 +216,7 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-12 lg:gap-16">
+                <!-- Section 1 -->
                 <div class="reveal">
                     <h3 class="text-xl font-sans font-medium text-pastel-textDark mb-4">Τι είναι</h3>
                     <p class="text-pastel-textMuted leading-reading font-light text-sm">
@@ -209,6 +225,7 @@
                     </p>
                 </div>
 
+                <!-- Section 2 -->
                 <div class="reveal delay-100">
                     <h3 class="text-xl font-sans font-medium text-pastel-textDark mb-4">Τι να περιμένει ο θεραπευόμενος</h3>
                     <ul class="space-y-4 text-pastel-textMuted leading-reading font-light text-sm list-none">
@@ -220,6 +237,7 @@
                     </ul>
                 </div>
 
+                <!-- Section 3 -->
                 <div class="reveal delay-200">
                     <h3 class="text-xl font-sans font-medium text-pastel-textDark mb-4">Πλαίσιο / Συχνότητα</h3>
                     <ul class="space-y-4 text-pastel-textMuted leading-reading font-light text-sm list-none">
@@ -236,6 +254,7 @@
         </div>
     </section>
 
+    <!-- Services / Topics Section -->
     <section id="services" class="py-24 lg:py-32 px-6 lg:px-12 bg-white border-b border-gray-100">
         <div class="max-w-[85rem] mx-auto">
             <div class="mb-16 reveal">
@@ -288,6 +307,7 @@
         </div>
     </section>
 
+    <!-- Clinic Space Images -->
     <section class="py-24 px-6 lg:px-12 bg-pastel-sand/30">
         <div class="max-w-[85rem] mx-auto">
             <div class="columns-1 md:columns-2 gap-6 space-y-6">
@@ -307,6 +327,7 @@
         </div>
     </section>
 
+    <!-- Lightbox -->
     <div id="lightbox" class="fixed inset-0 z-[100] flex items-center justify-center cursor-zoom-out" onclick="closeLightbox()">
         <button class="absolute top-8 right-8 text-pastel-textDark hover:text-pastel-petrol transition-colors">
             <i data-lucide="x" class="w-8 h-8"></i>
@@ -314,32 +335,15 @@
         <img id="lightbox-img" src="" alt="Enlarged" class="max-w-[95vw] max-h-[95vh] object-contain rounded-sm shadow-2xl" onclick="event.stopPropagation()">
     </div>
 
+    <!-- Contact & Footer -->
     <footer id="contact" class="bg-white border-t border-gray-200 pt-24 pb-12 px-6 lg:px-12">
         <div class="max-w-[85rem] mx-auto">
-            <div class="grid lg:grid-cols-2 gap-16 mb-16">
+            
+            <!-- Removed the Contact Form completely and centered the layout -->
+            <div class="grid lg:grid-cols-2 gap-16 mb-16 items-start">
                 
-                <div class="reveal">
-                    <h3 class="text-2xl font-sans font-semibold text-pastel-textDark mb-6">Φόρμα Επικοινωνίας</h3>
-                    <form class="space-y-5">
-                        <div class="grid grid-cols-2 gap-5">
-                            <input type="text" placeholder="Όνομα" class="w-full bg-pastel-sand/50 border border-gray-200 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-pastel-petrol transition-colors">
-                            <input type="text" placeholder="Επίθετο" class="w-full bg-pastel-sand/50 border border-gray-200 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-pastel-petrol transition-colors">
-                        </div>
-                        <input type="email" placeholder="Email" class="w-full bg-pastel-sand/50 border border-gray-200 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-pastel-petrol transition-colors">
-                        <textarea placeholder="Μήνυμα" rows="4" class="w-full bg-pastel-sand/50 border border-gray-200 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-pastel-petrol transition-colors resize-none"></textarea>
-                        
-                        <div class="flex items-start gap-3 mt-2">
-                            <input type="checkbox" id="consent" class="mt-1 accent-pastel-petrol">
-                            <label for="consent" class="text-xs text-pastel-textMuted font-light">Συμφωνώ στην επεξεργασία των προσωπικών μου δεδομένων για σκοπούς επικοινωνίας βάσει της πολιτικής απορρήτου.</label>
-                        </div>
-                        
-                        <button type="submit" class="bg-white border border-pastel-petrol text-pastel-petrol px-8 py-3 rounded-md text-sm font-medium hover:bg-pastel-petrol hover:text-white transition-colors w-full sm:w-auto">
-                            ΑΠΟΣΤΟΛΗ ΦΟΡΜΑΣ
-                        </button>
-                    </form>
-                </div>
-
-                <div class="reveal delay-100 flex flex-col justify-center">
+                <!-- Contact Details (Left) -->
+                <div class="reveal flex flex-col">
                     <h3 class="text-2xl font-sans font-semibold text-pastel-textDark mb-8">Στοιχεία Επικοινωνίας</h3>
                     
                     <ul class="space-y-6 text-pastel-textMuted text-sm font-light">
@@ -349,7 +353,8 @@
                         </li>
                         <li class="flex items-center gap-4">
                             <i data-lucide="phone" class="w-5 h-5 text-pastel-petrol shrink-0"></i>
-                            <a href="tel:+306951955938" class="text-lg font-medium text-pastel-textDark hover:text-pastel-petrol transition-colors">+30 695 195 5938</a>
+                            <!-- Click to Call enabled here too -->
+                            <a href="tel:6951955938" class="text-lg font-medium text-pastel-textDark hover:text-pastel-petrol transition-colors">+30 695 195 5938</a>
                         </li>
                         <li class="flex items-center gap-4">
                             <i data-lucide="mail" class="w-5 h-5 text-pastel-petrol shrink-0"></i>
@@ -361,36 +366,38 @@
                         </li>
                     </ul>
 
-                    <div class="mt-6">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.029490333792!2d23.7432095!3d37.9753443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd4e933451bb%3A0x6335ab2cc6e6b014!2sRizari%2017%2C%20Athina%20116%2034!5e0!3m2!1sen!2sgr!4v1713536859000!5m2!1sen!2sgr" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-md opacity-90 hover:opacity-100 transition-opacity"></iframe>
+                    <!-- Social Media Icons (Including YouTube) under contact info -->
+                    <div class="flex items-center gap-5 mt-10">
+                        <a href="https://www.instagram.com/aytognwsia_psychotherapy/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-pastel-sand flex items-center justify-center text-pastel-textMuted hover:bg-pastel-petrol hover:text-white transition-all">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.facebook.com/Konstantinos.Chatzis.Psy" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-pastel-sand flex items-center justify-center text-pastel-textMuted hover:bg-pastel-petrol hover:text-white transition-all">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@KChatzis_Psychotherapist" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-pastel-sand flex items-center justify-center text-pastel-textMuted hover:bg-pastel-petrol hover:text-white transition-all">
+                            <i data-lucide="youtube" class="w-5 h-5"></i>
+                        </a>
                     </div>
+                </div>
 
-                    <div class="mt-8 pt-8 border-t border-gray-100">
-                        <div class="flex flex-wrap gap-4 items-center">
-                            <a href="https://www.doctoranytime.gr/d/Symvoulos-psychikis-ygeias/xatzis-konstantinos" 
-                               target="_blank" rel="noopener"
-                               class="inline-flex items-center justify-center bg-white border border-gray-200 text-pastel-textDark px-6 py-2.5 rounded-md text-sm font-medium hover:border-pastel-petrol transition-colors shadow-sm">
-                                Κράτηση: Doctoranytime <i data-lucide="external-link" class="w-4 h-4 ml-2 text-pastel-textMuted"></i>
-                            </a>
-                            
-                            <a href="https://share.google/5tIZgTPuQ7QqI2kwT" 
-                               target="_blank" rel="noopener"
-                               class="inline-flex items-center justify-center bg-white border border-gray-200 text-pastel-textDark px-6 py-2.5 rounded-md text-sm font-medium hover:border-pastel-petrol transition-colors shadow-sm">
-                                Google Business <i data-lucide="map" class="w-4 h-4 ml-2 text-pastel-petrol"></i>
-                            </a>
-                        </div>
+                <!-- Maps & External Links (Right) -->
+                <div class="reveal delay-100">
+                    <!-- Maps Embed -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.029490333792!2d23.7432095!3d37.9753443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd4e933451bb%3A0x6335ab2cc6e6b014!2sRizari%2017%2C%20Athina%20116%2034!5e0!3m2!1sen!2sgr!4v1713536859000!5m2!1sen!2sgr" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg shadow-sm opacity-90 hover:opacity-100 transition-opacity"></iframe>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                        <a href="https://www.doctoranytime.gr/d/Symvoulos-psychikis-ygeias/xatzis-konstantinos" 
+                           target="_blank" rel="noopener"
+                           class="inline-flex items-center justify-center flex-1 bg-white border border-gray-200 text-pastel-textDark px-6 py-3 rounded-md text-sm font-medium hover:border-pastel-petrol transition-colors shadow-sm">
+                            Doctoranytime <i data-lucide="external-link" class="w-4 h-4 ml-2 text-pastel-textMuted"></i>
+                        </a>
                         
-                        <div class="flex items-center gap-5 mt-6">
-                            <a href="https://www.instagram.com/aytognwsia_psychotherapy/" target="_blank" rel="noopener" class="text-pastel-textMuted hover:text-pastel-petrol transition-colors">
-                                <i data-lucide="instagram" class="w-6 h-6"></i>
-                            </a>
-                            <a href="https://www.facebook.com/Konstantinos.Chatzis.Psy" target="_blank" rel="noopener" class="text-pastel-textMuted hover:text-pastel-petrol transition-colors">
-                                <i data-lucide="facebook" class="w-6 h-6"></i>
-                            </a>
-                            <a href="https://www.youtube.com/@KChatzis_Psychotherapist" target="_blank" rel="noopener" class="text-pastel-textMuted hover:text-pastel-petrol transition-colors">
-                                <i data-lucide="youtube" class="w-6 h-6"></i>
-                            </a>
-                        </div>
+                        <!-- GBP Priority Link -->
+                        <a href="https://share.google/5tIZgTPuQ7QqI2kwT" 
+                           target="_blank" rel="noopener"
+                           class="inline-flex items-center justify-center flex-1 bg-white border border-gray-200 text-pastel-textDark px-6 py-3 rounded-md text-sm font-medium hover:border-pastel-petrol transition-colors shadow-sm">
+                            Google Business <i data-lucide="map" class="w-4 h-4 ml-2 text-pastel-petrol"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -405,18 +412,17 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
         lucide.createIcons();
 
-        // Navbar Scroll Effect
+        // Navbar Scroll Effect (Shadow on scroll, background is now permanently visible)
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {
                 navbar.classList.add('nav-scrolled');
-                navbar.classList.remove('py-6');
             } else {
                 navbar.classList.remove('nav-scrolled');
-                navbar.classList.add('py-6');
             }
         });
 
